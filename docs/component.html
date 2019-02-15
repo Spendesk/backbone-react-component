@@ -70,13 +70,13 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
             </div>
             
             <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> define === <span class="hljs-string">'function'</span> &amp;&amp; define.amd) {
-    define([<span class="hljs-string">'react'</span>, <span class="hljs-string">'react-dom'</span>, <span class="hljs-string">'backbone'</span>, <span class="hljs-string">'underscore'</span>], factory);
+    define([<span class="hljs-string">'react'</span>, <span class="hljs-string">'react-dom'</span>, <span class="hljs-string">'prop-types'</span>, <span class="hljs-string">'backbone'</span>, <span class="hljs-string">'underscore'</span>], factory);
   } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span> !== <span class="hljs-string">'undefined'</span> &amp;&amp; <span class="hljs-built_in">module</span>.exports) {
-    <span class="hljs-built_in">module</span>.exports = factory(<span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-dom'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>));
+    <span class="hljs-built_in">module</span>.exports = factory(<span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-dom'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'prop-types'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'backbone'</span>), <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>));
   } <span class="hljs-keyword">else</span> {
-    factory(root.React, root.ReactDOM, root.Backbone, root._);
+    factory(root.React, root.ReactDOM, root.PropTypes, root.Backbone, root._);
   }
-}(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">React, ReactDOM, Backbone, _</span>) </span>{
+}(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">React, ReactDOM, PropTypes, Backbone, _</span>) </span>{
 <span class="hljs-meta">  'use strict'</span>;
   <span class="hljs-keyword">if</span> (!Backbone.React) {
     Backbone.React = {};
@@ -115,9 +115,9 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
             </div>
             
             <div class="content"><div class='highlight'><pre>    childContextTypes: {
-      <span class="hljs-attr">hasParentBackboneMixin</span>: React.PropTypes.bool.isRequired,
-      <span class="hljs-attr">parentModel</span>: React.PropTypes.any,
-      <span class="hljs-attr">parentCollection</span>: React.PropTypes.any
+      <span class="hljs-attr">hasParentBackboneMixin</span>: PropTypes.bool.isRequired,
+      <span class="hljs-attr">parentModel</span>: PropTypes.any,
+      <span class="hljs-attr">parentCollection</span>: PropTypes.any
     },</pre></div></div>
             
         </li>
@@ -135,9 +135,9 @@ optional.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>    contextTypes: {
-      <span class="hljs-attr">hasParentBackboneMixin</span>: React.PropTypes.bool,
-      <span class="hljs-attr">parentModel</span>: React.PropTypes.any,
-      <span class="hljs-attr">parentCollection</span>: React.PropTypes.any
+      <span class="hljs-attr">hasParentBackboneMixin</span>: PropTypes.bool,
+      <span class="hljs-attr">parentModel</span>: PropTypes.any,
+      <span class="hljs-attr">parentCollection</span>: PropTypes.any
     },</pre></div></div>
             
         </li>
